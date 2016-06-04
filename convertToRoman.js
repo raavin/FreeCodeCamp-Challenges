@@ -65,6 +65,26 @@ function convertToRoman(num) {
       romanNumeralArray.push("DCCC");
     } else if (element == "9" && index === 2){
       romanNumeralArray.push("CM");
+    } else if (element == "0" && index === 3){
+      romanNumeralArray.push("");
+    } else if (element == "1" && index === 3){
+      romanNumeralArray.push("M");
+    } else if (element == "2" && index === 3){
+      romanNumeralArray.push("MM");
+    } else if (element == "3" && index === 3){
+      romanNumeralArray.push("MMM");
+    } else if (element == "4" && index === 3){
+      romanNumeralArray.push("");
+    } else if (element == "5" && index === 3){
+      romanNumeralArray.push("");
+    } else if (element == "6" && index === 3){
+      romanNumeralArray.push("");
+    } else if (element == "7" && index === 3){
+      romanNumeralArray.push("");
+    } else if (element == "8" && index === 3){
+      romanNumeralArray.push("");
+    } else if (element == "9" && index === 3){
+      romanNumeralArray.push("");
     }
   });
  return romanNumeralArray.reverse().join("");
