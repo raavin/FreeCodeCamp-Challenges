@@ -1,13 +1,14 @@
 function binaryAgent(str) {
     var string = [];
     var value = 0;
-    for (var j = 0; j < str.length; j++) {
+    for (var j = 0; j < str.split(" ").length; j++) {
         for (var i = 1; i < 9; i++) {
             value = value + ((str.split(" ")[j].split("").reverse().join("")[
                 i - 1]) * Math.pow(2, i));
-            console.log(Math.pow(2, i));
+            //console.log(Math.pow(2, i));
         }
         string.push(value / 2);
+      console.log(j);
     }
     return string; //get first number and reverse it
 }
