@@ -1,14 +1,17 @@
 function binaryAgent(str) {
     var string = [];
     var value = 0;
-    for (var j = 0; j < str.split(" ").length; j++) { //Split sting and count elements
+    for (var j = 0; j < str.split(" ")
+        .length; j++) { //Split string and count elements
         for (var i = 1; i < 9; i++) {
-            value = value + ((str.split(" ")[j].split("").reverse().join("")[
-                i-1]) * Math.pow(2, i-1));
+            value = value + ((str.split(" ")[j]
+                .split("")
+                .reverse()
+                .join("")[i - 1]) * Math.pow(2, i - 1));
         }
         string.push(String.fromCharCode(value));
-      console.log(j);
-      value = 0;
+        console.log(j);
+        value = 0;
     }
     console.log(string.join(""));
     return string.join("");
