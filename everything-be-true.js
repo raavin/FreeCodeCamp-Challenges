@@ -1,14 +1,10 @@
-
 function truthCheck(collection, pre) {
   // Is everyone being true?
   
    var result = true;
    for (var i = 0; i < collection.length; i++){
      var userDetails = collection[i];
-     if (!userDetails.hasOwnProperty(pre) || 
-         //userDetails[pre] ||
-         userDetails[pre] === null ||
-         !isNaN(userDetails[pre])
+     if (!userDetails.hasOwnProperty(pre) || !userDetails[pre]
         ){
         result = false;
       } 
