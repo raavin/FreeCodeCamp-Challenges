@@ -1,14 +1,12 @@
 
 function addTogether() {
-  
+  var outerArg = arguments[0];
   if (arguments.length == 2){
       return arguments[0] + arguments[1];
   } else {
-    
-    return function(x) {
-      return arguments[0] + x;
+    return function(innerArg) {
+      return outerArg + innerArg;
   };
-    //return sumTwoAnd();
   }
 }
 var sumTwoAnd = addTogether();
