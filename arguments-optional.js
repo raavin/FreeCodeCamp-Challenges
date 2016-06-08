@@ -1,16 +1,17 @@
 
-function addTogether(first,second) {
-  var name = "Mozilla";
-  function oneArgument(oneArg) {
-    alert(name);
+function addTogether() {
+  
+  if (arguments.length == 2){
+      return arguments[0] + arguments[1];
+  } else {
+    
+    return function(x) {
+      return arguments[0] + x;
+  };
+    //return sumTwoAnd();
   }
-  return oneArgument;
 }
-
-addTogether(2,3);
 var sumTwoAnd = addTogether();
-sumTwoAnd();
-
-
-
+//addTogether(2,3);
+addTogether(1)(4);
 
