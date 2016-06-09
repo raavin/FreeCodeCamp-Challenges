@@ -1,17 +1,17 @@
-
 function addTogether() {
   var args = [...arguments];
   var outerArg = args[0];
   if ( typeof outerArg !== "number"){
     return undefined;
-  } else {
-    if (args.length == 2 ){
-      if (args[1] !== "number"){
-        return undefined;
-      } else {
+  } else {//1
+    if (args.length == 2){
+      if(args[1] !== "number"){
         return args[0] + args[1];//need to check for stringiness here
-    } else {
-      return function(innerArg) {
+      } else {
+        return undefined;
+      }
+    } else {//2
+      return function(innerArg) {//3
         console.log(typeof innerArg);
         if (typeof innerArg !== "number"){
           return undefined;
@@ -19,9 +19,9 @@ function addTogether() {
           return outerArg + innerArg;
         }
 
-      };
-    }
-  }
+      };//3
+    }//2
+  }//1
 }
 //var sumTwoAnd = addTogether();
 addTogether(2,3);
